@@ -22,9 +22,8 @@ def solve():
     INF = 10**18
     MOD = 10**9 + 7
 
-    #int(next(it))
-    #next(it)
-    #out.append(str(inp))
+    I = lambda: int(next(it)) #gets next int
+    S = it.__next__  #gets next
    
     t = int(next(it))
     for _ in range(t):
