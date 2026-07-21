@@ -22,14 +22,14 @@ def solve():
     INF = 10**18
     MOD = 10**9 + 7
 
-    I = lambda: int(next(it)) #gets next int
-    S = it.__next__  #gets next
+    I = lambda: int(next(it)) #I()
+    S = it.__next__ #S()
    
-    t = int(next(it))
+    t = I()
     for _ in range(t):
         pass#ans
 
-    sys.stdout.write("\n".join(out)+"\n")
+    sys.stdout.write("\n".join(map(str,out))+"\n")
 
 
 if __name__ == "__main__":
