@@ -1,4 +1,6 @@
 Patch notes:
+1.2
+- helper functions both take in a parameter n. I and S now returns a n-length list of ints and strings respectively.
 
 1.1
 - added helper functions: S() and I()
