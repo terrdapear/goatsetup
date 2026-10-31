@@ -21,6 +21,7 @@ def solve():
    
     I = lambda n=None: int(next(it)) if n is None else list(map(int, islice(it, n)))
     S = lambda n=None: next(it) if n is None else list(islice(it, n))
+    O = out.append
 
     INF = 10**18
     MOD = 10**9 + 7 #998_244_353
