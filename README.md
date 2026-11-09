@@ -1,13 +1,42 @@
-Patch notes:
-1.2
-- helper functions both take in a parameter n. I and S now returns a n-length list of ints and strings respectively.
+Terr's home comprog setup :> 
 
-1.1
-- added helper functions: S() and I()
-  S() and I() are functions that make taking the next input much easier to type (I hate typing out int(next(it))).
-  However, this introduced slight overhead to our fast i/o. S() actually directly calls the C method next so it's still blazingly fast,
-  but I() is a python lambda definition so our next int input will always cost some extra function call overhead. I was considering
-  other configurations, but I think this small price to pay for massive convenience is ok.
+FILES:  
+/ **ally.py**  
+Terr's Python competitive programming solution template. This template features:  
+- Fast I/O  
+- Commonly used Python imports  
+- Integrated local test file (hatdog.txt)  
+- Locally reports program runtime  
 
-1.0 
-- the og setup
+*How to use?*  
+Write your solution in between the "start" and "end" comments. Use I() and O() how you would normally use input() and print() minus their parameters. 
+  
+/ **hatdog.txt**  
+File for local tests.  
+
+*How to use?*    
+Copy the test input and paste it to this file. Now, ally.py takes whatever you pasted as input during runtime.  
+
+/ **generator.py**  
+Generator of test cases.  
+
+*How to use?*
+In out(), create variables and use list comprehension to build lines with elements separated by spaces. Each list = new line.  
+
+/ **interactive.py**  
+Terr's template for interactive problems. Too sleepy to write about this rn LOL. It's 2 am.  
+
+/ **template.py**  
+Exact copy of ally.py. This is here just in case it is needed.  
+
+**TIPS for writing solutions in competitive programming** (as of 2026)  
+Sufficiently good algorithmic design is of course the most important element of a competitive programming solution. However, just as important is its implementation. Many (not all) general good coding practices hold up in competitive programming. However, Python in particular is best used using very specific coding practices. Python, in this context, of course, not only refers to the language, but to the interpreter used. PyPy and CPython greatly differ in this regard. 
+
+*In CPython*  
+As an interpreted language, Python is incredibly slow. Luckily, Python features many built-in objects and functions natively written, optimized in C. With this in mind, avoid writing Python code as much as possible! Use built-ins as much as possible, avoid Python loops, and avoid classes! Code written in such a manner are called *Pythonic*.  
+
+*In PyPy*  
+A Just-In-Time (JIT) compiler is a type of interpreter that observes a running program, identifies the "hot" sections of code (usually highly repeated sections), and compiles these sections during runtime to increase code efficiency! PyPy uses a JIT compiler. With this in mind,  
+- Keep code SIMPLE! Write in Python.
+- Classes are okay. 
+- Loops are really fast.
